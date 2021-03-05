@@ -1,6 +1,11 @@
 # php-ii-mar-2021
 
 ## Homework
+* For 8 Mar 2021
+  * Lab: Interfaces
+  * Lab: Type Hinting
+  * Lab: Build Custom Exception Class
+  * Lab: Traits
 * For 5 Mar 2021
   * Lab: Create an Extensible Super Class
   * Lab: Magic Methods
@@ -44,7 +49,13 @@ chmod +x ./update.sh
 sudo ./update.sh
 ```
 
+## Resources
+* OOP examples: https://github.com/dbierer/classic_php_examples/tree/master/oop
+* Article on Late Static Binding: https://www.php.net/manual/en/language.oop5.late-static-bindings.php
+
 ## TODO
+* What vers of PHP introduced return data types? (7???)
+* When were nullable types introduced?
 * Finish the OpenSsl `encrypt()`
 * Locate example that uses `__call()` to implements "plugins"
 * Add reference to other magic method examples from "classic PHP repo"
@@ -65,4 +76,3 @@ Call Stack
 ```
 PHP Fatal error:  Uncaught Error: Typed property UserEntity::$lastName must not be accessed before initialization in /home/vagrant/Zend/workspaces/DefaultWorkspace/sandbox/test.php:22
 ```
-
