@@ -51,29 +51,21 @@ sudo ./update.sh
 ```
 
 ## Resources
-* OOP examples: https://github.com/dbierer/classic_php_examples/tree/master/oop
 * Article on Late Static Binding: https://www.php.net/manual/en/language.oop5.late-static-bindings.php
 
+## Q & A
+* Q: What vers of PHP introduced return data types? (7???)
+* A: PHP 7.0
+* A: See: https://www.php.net/manual/en/language.types.declarations.php
+
+* Q: When were nullable types introduced?
+* A: PHP 7.1.  See: https://www.php.net/manual/en/language.types.declarations.php#language.types.declarations.nullable
+
+* Q: Locate example that uses `__call()` to implement "plugins"
+* A: `Laminas\Mvc\Controller\AbstractController::__call()`
+* A: See: https://github.com/laminas/laminas-mvc/blob/4.0.x/src/Controller/AbstractController.php
+
+* Q: Add reference to other magic method examples from "classic PHP repo"
+* A: OOP examples: https://github.com/dbierer/classic_php_examples/tree/master/oop
+
 ## TODO
-* What vers of PHP introduced return data types? (7???)
-* When were nullable types introduced?
-* Finish the OpenSsl `encrypt()`
-* Locate example that uses `__call()` to implements "plugins"
-* Add reference to other magic method examples from "classic PHP repo"
-* Error in CustomersModel
-```
-( ! ) Fatal error: Uncaught TypeError: OrderApp\Model\CustomersModel::getCustomer(): Return value must be of type array, bool returned in /home/vagrant/Zend/workspaces/DefaultWorkspace/orderapp/src/OrderApp/Model/CustomersModel.php on line 32
-( ! ) TypeError: OrderApp\Model\CustomersModel::getCustomer(): Return value must be of type array, bool returned in /home/vagrant/Zend/workspaces/DefaultWorkspace/orderapp/src/OrderApp/Model/CustomersModel.php on line 32
-Call Stack
-#	Time	Memory	Function	Location
-1	0.0001	360936	{main}( )	.../index.php:0
-2	0.0019	414440	OrderApp\Controller\IndexController->index( )	.../index.php:29
-3	0.0019	414440	OrderApp\Controller\IndexController->__call( $method = 'index', $params = [] )	.../index.php:29
-4	0.0019	414480	OrderApp\Controller\IndexController->indexAction( )	.../AbstractController.php:50
-5	0.0047	454288	OrderApp\Domain\Domain->processInput( $form = class OrderApp\Form\AddOrderForm { protected $elements = [0 => class OrderApp\Core\Form\Inputs\Text { ... }, 1 => class OrderApp\Core\Form\Inputs\SelectAssoc { ... }, 2 => class OrderApp\Core\Form\Inputs\Text { ... }, 3 => class OrderApp\Core\Form\Inputs\Select { ... }, 4 => class OrderApp\Core\Form\Inputs\Textarea { ... }, 5 => class OrderApp\Core\Form\Inputs\Submit { ... }]; protected $models = []; protected $rawData = ['order_date' => '2021-03-02', 'cust_id' => '3', 'amount' => '9.99', 'status_filter' => 'all', 'description' => 'Test 2021-03-02 23:54', 'submit' => 'Add Order']; protected $data = ['order_date' => '2021-03-02', 'cust_id' => '3', 'amount' => '9.99', 'status_filter' => 'all', 'description' => 'Test 2021-03-02 23:54']; public $isValid = TRUE; protected array $config = ['name' => 'AddOrderForm', 'id' => 'addorder', 'method' => 'post', 'action' => 'index.php'] } )	.../IndexController.php:45
-6	0.0047	454288	OrderApp\Model\CustomersModel->getCustomer( $id = 3 )	.../Domain.php:44
-```
-* Research const. arg. promo.:
-```
-PHP Fatal error:  Uncaught Error: Typed property UserEntity::$lastName must not be accessed before initialization in /home/vagrant/Zend/workspaces/DefaultWorkspace/sandbox/test.php:22
-```
