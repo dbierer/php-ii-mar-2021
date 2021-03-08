@@ -1,6 +1,10 @@
 # php-ii-mar-2021
 
 ## Homework
+* For 10 Mar 2021
+  * Lab: Prepared Statements
+  * Lab: Stored Procedure
+  * Lab: Transaction
 * For 8 Mar 2021
   * Lab: Interfaces
   * Lab: Type Hinting
@@ -15,6 +19,7 @@
   * Update the VM (see instructions below)
   * Lab: Namespace
   * Lab: Create a Class
+
 ## Class Notes
 * Composer 
   * https://getcomposer.org/
@@ -52,6 +57,7 @@ sudo ./update.sh
 
 ## Resources
 * Article on Late Static Binding: https://www.php.net/manual/en/language.oop5.late-static-bindings.php
+* Doctrine Object Relational Mapper: https://www.doctrine-project.org/projects/orm.html
 
 ## Q & A
 * Q: What vers of PHP introduced return data types? (7???)
