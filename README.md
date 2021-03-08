@@ -6,6 +6,7 @@
   * Lab: Type Hinting
   * Lab: Build Custom Exception Class
   * Lab: Traits
+  * Lab: Review the OrderApp and come back Monday with questions (if any)
 * For 5 Mar 2021
   * Lab: Create an Extensible Super Class
   * Lab: Magic Methods
