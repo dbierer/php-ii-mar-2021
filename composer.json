@@ -1,0 +1,10 @@
+{
+    "require": {
+        "phpmailer/phpmailer": "^6.3"
+    },
+    "autoload" : {
+		"psr-4" : {
+			"Demo\\" : "src/Demo"
+		}
+	}
+}

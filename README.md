@@ -1,6 +1,9 @@
 # php-ii-mar-2021
 
 ## Homework
+* For 12 Mar 2021
+  * Lab: Validate an Email Address
+  * Lab: Composer with OrderApp
 * For 10 Mar 2021
   * Lab: Prepared Statements
   * Lab: Stored Procedure
@@ -29,6 +32,10 @@
   * Tool to find bugs or incompatibilities without having to write tests
 * Please note re: `__toString()` Exceptions
   * You can throw an Exception in `__toString()` *only* in PHP 8
+* Regex
+  * Absolute end of a multi-line string is `\Z`
+  * (Slide: Positioning)
+  * URL validation pattern: `!^http(s)?://\w+.*!i`
 ## VM Updates
 * Update the OS
   * Bring up the VM and login (user: vagrant, pwd: vagrant)
@@ -58,6 +65,11 @@ sudo ./update.sh
 ## Resources
 * Article on Late Static Binding: https://www.php.net/manual/en/language.oop5.late-static-bindings.php
 * Doctrine Object Relational Mapper: https://www.doctrine-project.org/projects/orm.html
+* PHPMailer: https://github.com/PHPMailer/PHPMailer
+* Regular Expressions: 
+  * https://regex101.com/
+  * https://regexr.com/
+
 
 ## Q & A
 * Q: What vers of PHP introduced return data types? (7???)
@@ -65,7 +77,8 @@ sudo ./update.sh
 * A: See: https://www.php.net/manual/en/language.types.declarations.php
 
 * Q: When were nullable types introduced?
-* A: PHP 7.1.  See: https://www.php.net/manual/en/language.types.declarations.php#language.types.declarations.nullable
+* A: PHP 7.1.  
+* A" See: https://www.php.net/manual/en/language.types.declarations.php#language.types.declarations.nullable
 
 * Q: Locate example that uses `__call()` to implement "plugins"
 * A: `Laminas\Mvc\Controller\AbstractController::__call()`
@@ -75,3 +88,4 @@ sudo ./update.sh
 * A: OOP examples: https://github.com/dbierer/classic_php_examples/tree/master/oop
 
 ## TODO
+* Q: How do you create a stored procedure using only PHP?

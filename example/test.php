@@ -1,16 +1,24 @@
 <?php
-$date = new DateTime(); // today's date
-for ($x = 30; $x < 100; $x += 30) {
-    $day[$x] = clone $date;
-    $day[$x]->add(new DateInterval('P' . $x . 'D'));
-    echo '<br>' . $day[$x]->format('Y-m-d') . PHP_EOL;
-}
-var_dump($day);	
-// outputs:
-/*
-<br>2017-11-02
+$test = 'To this,ha ha,I say tally ho. Ta ta. "Ha hah"';
 	
-<br>2018-01-01
+$words = array();
 	
-<br>2018-04-01
-*/
+// This does not work:
+	
+// $words = explode(' ', $test);
+	
+ 
+	
+// Try this instead:
+	
+preg_match_all('/\w+?\b/', $test, $words);
+	
+var_dump($words);
+	
+ 
+	
+// this also works:
+	
+$words = preg_split('/[^\w]/i', $test, 0, PREG_SPLIT_NO_EMPTY);
+	
+var_dump($words);
