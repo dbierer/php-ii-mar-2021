@@ -1,5 +1,7 @@
 # php-ii-mar-2021
 
+RFC for "official" email regex???
+
 ## Homework
 * For 12 Mar 2021
   * Lab: Validate an Email Address
@@ -36,6 +38,70 @@
   * Absolute end of a multi-line string is `\Z`
   * (Slide: Positioning)
   * URL validation pattern: `!^http(s)?://\w+.*!i`
+* Composer
+  * Composer 2 places restrictions on the `name` field in `composer.json`
+    * all lowercase
+    * no spaces
+    * must include `/`
+    * Example should look something like this:
+```
+{
+    "name": "order/app",
+    "description": "Order application for customer orders",
+    "keywords": [
+        "Order App"
+    ],
+    "homepage": "http://orderapp/",
+    "require": {
+        "php": ">=7.4",
+        "guzzlehttp/guzzle": "*"
+    }
+}
+```
+* SOAP vs. REST
+  * See: https://www.ateam-oracle.com/performance-study-rest-vs-soap-for-mobile-applications
+  * SOAP client example: https://github.com/dbierer/classic_php_examples/blob/master/web/soap_client.php
+  * In the slide with `file_get_contents()` REST request example: s/be like this:
+```
+<?php
+// Make a request for JSON	
+$url = 'https://api.unlikelysource.com/api?city=Lincoln&country=GB';
+$response = file_get_contents($url);
+var_dump(json_decode($response));
+```
+  * Using CURL to generate a REST request
+```
+<?php
+// Make a request for JSON	
+$url = 'https://api.unlikelysource.com/api?city=Catoira&country=ES';
+
+// create a new cURL resource
+$ch = curl_init();
+
+// set URL and other appropriate options
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_HEADER, 0);
+
+// grab URL and pass it to the browser
+$result = curl_exec($ch);
+
+var_dump($result);
+var_dump(curl_getinfo($ch));
+
+// close cURL resource, and free up system resources
+curl_close($ch);
+
+```
+* Streams
+  * StreamWrapper prototype: https://www.php.net/manual/en/class.streamwrapper.php
+  * To change the HTTP method, create a "context": https://www.php.net/manual/en/function.stream-context-create.php
+* Testing: see phpunit.de
+* Automatic Documentation: https://phpdoc.org/
+* `php.ini` settings: https://www.php.net/manual/en/ini.list.php
+* API documentation:
+  * https://swagger.io/
+* PHP Async
+  * See: Swoole Extension: https://www.php.net/swoole
 ## VM Updates
 * Update the OS
   * Bring up the VM and login (user: vagrant, pwd: vagrant)
